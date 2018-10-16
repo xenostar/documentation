@@ -60,6 +60,9 @@ Pantheon supports designated use cases for [WordPress Site Networks](/docs/guide
 
 We do not support [Drupal Multisite](https://www.drupal.org/docs/7/multisite-drupal/multi-site-sharing-the-same-code-base). See blog posts: [Why Drupal Multisite is not Enterprise Grade](https://pantheon.io/blog/why-drupal-multisite-not-enterprise-grade) and [Much Ado About Drupal Multisite](https://pantheon.io/blog/much-ado-about-drupal-multisite).
 
+### SSO with WordPress Multisite
+While we are able to verify that SSO will work with the site's primary domain,subdirectory/subdomain urls may not work.
+
 ## One Application per Site
 
 Each site supports a single Drupal or WordPress application. Placing a WordPress application to behave as the blog for a Drupal site, for example, is unsupported.
