@@ -8,18 +8,19 @@ Pantheon Professional Services can be brought in as needed to overcome any chall
 ## Migrations
 Whether you are moving one or hundreds of sites to the platform, Pantheon Migration Services will help you get it done quickly. Our hands-on, white-glove migration services for organizations and agencies remove the burden of migrations, by migrating the sites for you so that you can concentrate on what matters most to your end users. We do all the heavy lifting and let you focus on delivering better, faster websites for your colleagues, constituents or clients. [Contact our migrations team](https://pantheon.io/migrations){.external} for details.
 
+## Consulting and Specialty Services
+If you need advice on architecting a solution, planning for the future, preparing for expansion, tackling a particularly complex use case, or just need problem solving expertise, we can help you achieve your goals. Our Professional Services team has the broad experience and deep expertise to guide you through your implementation needs. [Contact us](https://pantheon.io/contact-us){.external} for details.
+
 ## Load Testing and Performance Testing
 Load tests are critical steps in ensuring a successful launch. There is no better way to expose and identify potential performance bottlenecks before you’ve launched your site. Load tests provide critical insight for how a site will perform in the wild and under peak traffic spikes and ensure that your website launches smoothly and that it is ready to absorb the high traffic that success brings.
 
 Performance testing can help identify performance bottlenecks and potential optimizations aimed at reducing errors and enhancing the end-user experience on live sites.
 
-[Contact us](https://pantheon.io/contact-us){.external} for details.
-
 ## Single Sign-On
-Single Sign-On (SSO) solutions enhance security and are a requirement for many projects where organizations need to centrally manage their user's identities and provide seamless integration across multiple applications.  We can help implement SSO on Pantheon, saving your organization time and money. 
+Single Sign-On (SSO) solutions enhance security and are a requirement for many projects where organizations need to centrally manage their user's identities and provide seamless integration across multiple applications.  Pantheon Professional Services can help implement SSO on Pantheon, saving your organization time and money. 
 
-## Consulting and Specialty Services
-If you need advice on architecting a solution, planning for the future, preparing for expansion, tackling a particularly complex use case, or just need problem solving expertise, we can help you achieve your goals. Our Professional Services team has the broad experience and deep expertise to guide you through your implementation needs. [Contact us](https://pantheon.io/contact-us){.external} for details.
+## CDN Stacking
+For most use cases Pantheon's Global CDN makes it unnecessary, and even undesirable, to stack another third-party CDN on top of the Global CDN. However, in situations where this is deemed necessary, Pantheon Professional Services can help your preferred solution.
 
 ## Expert Training
 We provide highly customized, one-on-one training from Pantheon experts for your development team to apply custom workflows to active Pantheon projects. Tailored DevOps training for your entire team is also available. We review your current projects and workflow to deliver trainings designed specifically to improve website operations for your team. These trainings can be delivered remotely, onsite or online for multiple offices. [Contact us](https://pantheon.io/agencies/learn-pantheon){.external} for details.
