@@ -16,6 +16,10 @@ jobs:
             cd /home/circleci/build/gatsby
             npm install
       - run:
+          name: Import GitHub token
+          command: |
+            echo "GITHUB_API=$GITHUB_TOKEN" >> /home/circleci/build/gatsby/.env.production
+      - run:
           name: Gatsby Generate
           command: |
             cd /home/circleci/build/gatsby
