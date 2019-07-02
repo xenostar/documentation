@@ -13,12 +13,12 @@ jobs:
       - run:
           name: Prep Environment
           command: |
-            cd /documentation/gatsby
+            cd /home/circleci/build/gatsby
             npm install
       - run:
           name: Gatsby Generate
           command: |
-            cd /documentation/gatsby
+            cd /home/circleci/build/gatsby
             ./node_modules/gatsby/dist/bin/gatsby.js build
       - run:
           name: Deploy Multidev environment
@@ -30,7 +30,7 @@ jobs:
       - run:
           name: Start Gatsby
           command: |
-            cd /documentation/gatsby
+            cd /home/circleci/build/gatsby
             ./node_modules/gatsby/dist/bin/gatsby.js develop
           background: true
       - run:
