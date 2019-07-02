@@ -71,22 +71,22 @@ const Header = ({ data }) => (
               <div className="row sub-menu-top">
                 <div className="col-xs-6">
                   <li>
-                    <a id="get-started" href="/docs/get-started">
+                    <a id="get-started" href="/get-started">
                       Get Started
                     </a>
                   </li>
                   <li>
-                    <a id="develop" href="/docs/develop">
+                    <a id="develop" href="/develop">
                       Develop
                     </a>
                   </li>
                   <li>
-                    <a id="go-live" href="/docs/go-live">
+                    <a id="go-live" href="/go-live">
                       Go Live
                     </a>
                   </li>
                   <li>
-                    <a id="platform" href="/docs/platform">
+                    <a id="platform" href="/platform">
                       Explore Platform Architecture
                     </a>
                   </li>
@@ -94,22 +94,22 @@ const Header = ({ data }) => (
 
                 <div className="col-xs-6">
                   <li>
-                    <a id="automate" href="/docs/automate">
+                    <a id="automate" href="/automate">
                       Automate & Integrate
                     </a>
                   </li>
                   <li>
-                    <a id="performance" href="/docs/performance">
+                    <a id="performance" href="/performance">
                       Optimize Performance
                     </a>
                   </li>
                   <li>
-                    <a id="manage" href="/docs/manage">
+                    <a id="manage" href="/manage">
                       Manage Teams & Organizations
                     </a>
                   </li>
                   <li>
-                    <a id="troubleshoot" href="/docs/troubleshoot">
+                    <a id="troubleshoot" href="/troubleshoot">
                       Troubleshoot
                     </a>
                   </li>
@@ -119,17 +119,17 @@ const Header = ({ data }) => (
               <div className="row sub-menu-bottom">
                 <div className="col-xs-12">
                   <li>
-                    <a id="changelogs" href="/docs/changelog">
+                    <a id="changelogs" href="/changelog">
                       Changelog
                     </a>
                   </li>
                   <li>
-                    <a id="getting-started-guide" href="/docs/guides/">
+                    <a id="getting-started-guide" href="/guides/">
                       Guides <span className="label label-info">NEW</span>
                     </a>
                   </li>
                   <li>
-                    <a id="terminus" href="/docs/terminus">
+                    <a id="terminus" href="/terminus">
                       Terminus Manual
                     </a>
                   </li>

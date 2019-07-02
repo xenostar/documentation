@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: pantheonsystems/documentation:latest
+      - image: circleci/node:10.16.0
     working_directory: ~/build
     steps:
       - checkout
@@ -13,13 +13,13 @@ jobs:
       - run:
           name: Prep Environment
           command: |
+            cd /documentation/gatsby
             npm install
-            ./node_modules/.bin/grunt
-            mkdir output_prod
-            cd output_prod && ln -s ./ source
       - run:
-          name: Sculpin Generate
-          command: /documentation/bin/sculpin generate --env=prod
+          name: Gatsby Generate
+          command: |
+            cd /documentation/gatsby
+            ./node_modules/gatsby/dist/bin/gatsby.js build
       - run:
           name: Deploy Multidev environment
           command: bash ./scripts/deploy-multidev.sh
@@ -28,11 +28,13 @@ jobs:
           command: phantomjs --webdriver=8643
           background: true
       - run:
-          name: Start Sculpin
-          command: /documentation/bin/sculpin server
+          name: Start Gatsby
+          command: |
+            cd /documentation/gatsby
+            ./node_modules/gatsby/dist/bin/gatsby.js develop
           background: true
       - run:
-          name: Wait for Sculpin
+          name: Wait for Gatsby
           command: dockerize -wait tcp://localhost:8000 -timeout 1m
       - run:
           name: Behat
@@ -46,10 +48,10 @@ jobs:
           name: Merge Conflicts
           command: |
             scripts/merge_conflicts.sh
-#      - run:
-#          name: htmlProofer
-#          command: |
-#            htmlproofer --assume-extension  ./output_prod/ --disable-external true
+      - run:
+          name: htmlProofer
+          command: |
+            htmlproofer --assume-extension  ./output_prod/ --disable-external true
       - run:
           name: Speedtest
           command: |

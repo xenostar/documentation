@@ -49,16 +49,16 @@ const Footer = ({ data }) => {
                         <h4 className="block__title">Topics</h4>
                         <ul className="menu">
                           <li className="first leaf menu-mlid-1147">
-                            <a href="/docs/get-started/">Get Started </a>
+                            <a href="/get-started/">Get Started </a>
                           </li>
                           <li className="leaf menu-mlid-1148">
-                            <a href="/docs/develop/">Develop</a>
+                            <a href="/develop/">Develop</a>
                           </li>
                           <li className="leaf menu-mlid-1149">
-                            <a href="/docs/go-live/">Go Live</a>
+                            <a href="/go-live/">Go Live</a>
                           </li>
                           <li className="leaf menu-mlid-1162">
-                            <a href="/docs/platform/">
+                            <a href="/platform/">
                               Explore Platform Architecture
                             </a>
                           </li>
@@ -67,20 +67,20 @@ const Footer = ({ data }) => {
                       <div className="col-xs-6 col-sm-3 col-no-title">
                         <ul className="menu">
                           <li className="first leaf menu-mlid-1147">
-                            <a href="/docs/automate/">Automate & Integrate</a>
+                            <a href="/automate/">Automate & Integrate</a>
                           </li>
                           <li className="leaf menu-mlid-1148">
-                            <a href="/docs/performance/">
+                            <a href="/performance/">
                               Optimize Performance
                             </a>
                           </li>
                           <li className="leaf menu-mlid-1149">
-                            <a href="/docs/manage/">
+                            <a href="/manage/">
                               Manage Teams & Organizations
                             </a>
                           </li>
                           <li className="leaf menu-mlid-1162">
-                            <a href="/docs/troubleshoot/">Troubleshoot</a>
+                            <a href="/troubleshoot/">Troubleshoot</a>
                           </li>
                         </ul>
                       </div>
@@ -103,7 +103,7 @@ const Footer = ({ data }) => {
                             <a href="https://status.pantheon.io/">Status</a>
                           </li>
                           <li className="last leaf menu-mlid-1154">
-                            <a href="/docs/support/">Support</a>
+                            <a href="/support/">Support</a>
                           </li>
                         </ul>
                       </div>
@@ -111,18 +111,18 @@ const Footer = ({ data }) => {
                         <h4 className="block__title">Community</h4>
                         <ul className="menu">
                           <li className="first leaf menu-mlid-1142">
-                            <a href="/docs/code-of-conduct/">Code of Conduct</a>
+                            <a href="/code-of-conduct/">Code of Conduct</a>
                           </li>
                           <li className="leaf menu-mlid-1188">
-                            <a href="/docs/contributors/">Contributors</a>
+                            <a href="/contributors/">Contributors</a>
                           </li>
                           <li className="leaf menu-mlid-1143">
-                            <a href="/docs/power-users/">
+                            <a href="/power-users/">
                               Community and Power Users Group
                             </a>
                           </li>
                           <li className="last leaf menu-mlid-1145">
-                            <a href="/docs/contribute/">Learn to Contribute</a>
+                            <a href="/contribute/">Learn to Contribute</a>
                           </li>
                         </ul>
                       </div>
