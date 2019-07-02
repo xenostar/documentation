@@ -25,6 +25,10 @@ jobs:
             cd /home/circleci/build/gatsby
             ./node_modules/gatsby/dist/bin/gatsby.js build
       - run:
+          name: Install Rsync
+          command: |
+            sudo apt install -y rsync
+      - run:
           name: Deploy Multidev environment
           command: bash ./scripts/deploy-multidev.sh
       - run:
