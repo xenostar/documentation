@@ -140,10 +140,10 @@ const Header = ({ data }) => (
         </ul>
         <div className="navsearch-container">
           <div className="navsearch form-group has-feedback">
-            <div className="container container-navsearch-box-guide">
+            <div className="container-fluid container-navsearch-box-guide">
               <form
                 id="searchform"
-                action="/docs/search"
+                action="/search"
                 acceptCharset="UTF-8"
                 encType="application/x-www-form-urlencoded"
               >
@@ -152,6 +152,9 @@ const Header = ({ data }) => (
                   className="addsearch"
                   placeholder="Search Pantheon Documentation"
                 />
+                <script 
+                  src="https://addsearch.com/js/?key=a7b957b7a8f57f4cc544c54f289611c6">
+                </script>
               </form>
               <span
                 className="glyphicon glyphicon-search form-control-feedback"
