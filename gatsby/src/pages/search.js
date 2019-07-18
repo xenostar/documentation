@@ -9,7 +9,6 @@ import ChangelogPreview from '../layout/changelog-preview';
 
 class Index extends React.Component {
 	render() {
-		const { data: { homeYaml, allMdx } } = this.props;
 		return (
 			<Layout>
 				<div style={{ marginTop: '-20px' }} className="container">
@@ -46,54 +45,3 @@ class Index extends React.Component {
 
 export default Index;
 
-export const pageQuery = graphql`
-	{
-		homeYaml {
-			title
-			call_to_action {
-				title
-				sub_title
-				url
-			}
-			topics {
-				title
-				summary
-				icon
-				url
-        secondary
-			}
-			three_column_links {
-				title
-        links {
-          text
-          url
-        }
-			}
-			changelog_preview {
-				title
-				url
-			}
-		}
-
-		allMdx(filter: {fileAbsolutePath: {regex: "/changelogs/"}}, sort: {fields: [fileAbsolutePath], order: DESC}, limit: 4) {
-			edges {
-				node {
-					id
-					frontmatter {
-						title
-					}
-					fields {
-						slug
-						markdownBody {
-							childMdx {
-								code {
-									body
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-`;

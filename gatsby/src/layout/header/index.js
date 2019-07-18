@@ -1,6 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import './style.css';
+import AddSearch from "../../components/addSearch"
 
 const Header = ({ data }) => (
   <>
@@ -141,26 +142,7 @@ const Header = ({ data }) => (
         <div className="navsearch-container">
           <div className="navsearch form-group has-feedback">
             <div className="container-fluid container-navsearch-box-guide">
-              <form
-                id="searchform"
-                action="/search"
-                acceptCharset="UTF-8"
-                encType="application/x-www-form-urlencoded"
-              >
-                <input
-                  type="search"
-                  className="addsearch"
-                  placeholder="Search Pantheon Documentation"
-                />
-                <script 
-                  src="https://addsearch.com/js/?key=a7b957b7a8f57f4cc544c54f289611c6">
-                </script>
-              </form>
-              <span
-                className="glyphicon glyphicon-search form-control-feedback"
-                aria-hidden="true"
-              />
-              <span className="sr-only">(search)</span>
+              <AddSearch />
             </div>
           </div>
         </div>
