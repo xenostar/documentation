@@ -15,7 +15,7 @@ Wraith works by crawling two websites, taking screenshots of both, and then comp
 
 In the following example, the accidental removal of the date field on the lower right caused spacing and other changes. These changes were automatically detected and highlighted in red.
 
-<Image alt="Visual Regression Date Change" src="visual-date-diff.png" />
+<Image alt="Visual Regression Date Change" path="visual-date-diff.png" />
 
 
 ## Installation
@@ -172,7 +172,7 @@ Wraith will navigate your two websites and generate an image comparison gallery.
 open shots/gallery.html
 ```
 
-<Image alt="Full Screen Diff Example" src="fullscreen-diff.png" />
+<Image alt="Full Screen Diff Example" path="fullscreen-diff.png" />
 
 ## Capture with Selectors
 
@@ -232,7 +232,7 @@ Run Wraith to produce a new gallery from the selectors. To execute this Wraith t
 wraith capture capture
 ```
 
-<Image alt="Headers Diff Example" src="headers-diff.png" />
+<Image alt="Headers Diff Example" path="headers-diff.png" />
 
 
 ## History Mode
