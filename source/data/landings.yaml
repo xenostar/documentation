@@ -973,6 +973,8 @@
           url: '/guides/trainers/'
         - text: 'Using Terminus to Create and Update Drupal Sites on Pantheon'
           url: '/guides/terminus-drupal-site-management/'
+        - text: 'Implement SimpleSAMLphp as idP for Drupal'
+          url: '/guides/drupal-8-simplesamlphp'
     - title: ' '
       links:
         - text: 'Collaborative Development Using GitHub and Pantheon'

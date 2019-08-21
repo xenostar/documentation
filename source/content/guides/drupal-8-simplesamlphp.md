@@ -9,10 +9,12 @@ permalink: docs/guides/:basename/
 ---
 
 There are a number of articles detailing how to implement the SAML 2.0 protocol, but if you want to host your site on Pantheon and use Drupal 8 as your identity provider, there are a few details to take in account.
-<div class="alert alert-info">
-<h4 class="info">Note</h4><p markdown="1">The following tutorial assumes that you are on a linux based computer or a Mac.
-</p>
-</div>
+
+<Callout title="Note" type="info">
+
+The following tutorial assumes that you are on a linux based computer or a Mac.
+
+</Callout>
 
 ## Before You Begin
 
