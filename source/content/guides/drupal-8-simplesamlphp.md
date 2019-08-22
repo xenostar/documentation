@@ -12,7 +12,7 @@ There are a number of articles detailing how to implement the SAML 2.0 protocol,
 
 <Callout title="Note" type="info">
 
-The following tutorial assumes that you are on a linux based computer or a Mac.
+The following tutorial assumes that you are using a Linux-based operating system or MacOS.
 
 </Callout>
 
@@ -21,62 +21,74 @@ The following tutorial assumes that you are on a linux based computer or a Mac.
 Before starting with this guide, make sure you have the following:
 
  - Have a working Drupal 8 site.
- - Download the latest version of [SimpleSAMLphp](https://simplesamlphp.org/download) and place it on `yourproject/private/simplesamlphp`
+ - Download the latest version of [SimpleSAMLphp](https://simplesamlphp.org/download) and place it on `projectroot/private/simplesamlphp`
  - Download the Drupal module [saml_idp](https://github.com/Javi-er/saml_idp) (you’ll notice that this repo is a fork of [this one](https://github.com/bradjones1/saml_idp) this is because there were some changes necessary to make it work which are [described here](https://www.drupal.org/project/saml_idp/issues/3013357).)
- 
-## Getting started
+
+<hr /> 
 
 Your project structure and configuration needs to be tweaked so it's recognized by Pantheon when deployed to the server.
 
-### Setting up SAML Idp module
-By now you should have SAML Idp module on your Drupal 8 site, go to the admin interface and enable it now.
+## Set up the SAML Idp module
+By now you should have SAML Idp module on your Drupal 8 site.
 
-After this create the subdirectory ``/simplesamlphp/drupalauth`` and create an empty file with the name `default_enable` in that directory in order to enable the Drupal 8 integration. You can also do this with Drush executing
+1. Go to the admin interface and enable the new module.
 
-```bash
-drush ev 'Drupal\saml_idp\Install::postInstall()'
-```
+1. Create the subdirectory `simplesamlphp/drupalauth/` and an empty file with the name `default_enable` in that directory in order to enable the Drupal 8 integration:
 
-### Setting up SimpleSAMLphp
+  ```bash
+  cd projectroot/simplesamlphp/
+  mkdir drupalauth
+  touch drupalauth/default_enable
+  ```
 
-1.  Create a symlink on your project root from ``/simplesaml`` to ``/private/simplesamlphp/www``
+  You can also do this with Drush:
 
-    ```bash
-    $ ln -s ./private/simplesamlphp/www ./simplesaml
-    ```
+  ```bash
+  drush ev 'Drupal\saml_idp\Install::postInstall()'
+  ```
+
+## Set up SimpleSAMLphp
+
+1. Create a symlink on your project root from ``/simplesaml`` to ``/private/simplesamlphp/www``
+
+   ```bash
+   ln -s ./private/simplesamlphp/www ./simplesaml
+   ```
+   
+   Your project structure should be as follow:
+   
+   ```markdown
+   yourproject
+   ├── pantheon.yml   
+   ├── ...
+   └─── private
+   │   │
+   │   └─── simplesamlphp
+   │       └─── ...
+   └─── simplesamlphp -> ./private/simplesamlphp/www  
+   |
+   └───index.php
+   ├── modules
+   └── ...
+   ```
     
-    Your project structure should be as follow:
-    
-    ```markdown
-    yourproject
-    ├── pantheon.yml   
-    ├── ...
-    └─── private
-    │   │
-    │   └─── simplesamlphp
-    │       └─── ...
-    └─── simplesamlphp -> ./private/simplesamlphp/www  
-    |
-    └───index.php
-    ├── modules
-    └── ...
-    ```
-    
-4. Add a virtual host for your project
-   1. Set up an enviroment variable on your virtual host configuration called `SIMPLESAMLPHP_CONFIG_DIR` pointing to your project simplesaml configuration file, for instance: `/path/to/yourproject/simplesamlphp/config` .
-   2. add an alias on your virtual host so `/simplesaml` resolves to `/path/to/yourproject/simplesamlphp/www`.
-If you are using Apache as your local server, the virtual host configuration will look as follow:
+## Add a virtual host for your project
 
-    ``` apache
-    <VirtualHost *:80>
-     ServerName local.myproject.com
-     DocumentRoot "/var/www/project"
-     SetEnv SIMPLESAMLPHP_CONFIG_DIR /var/www/project/simplesamlphp/config
-     Alias /simplesaml /var/www/project/simplesamlphp/www
-     ErrorLog "/log/project_log"
-     ......
-    </VirtualHost>
-    ```
+1. Set up an enviroment variable on your virtual host configuration called `SIMPLESAMLPHP_CONFIG_DIR` pointing to your project simplesaml configuration file, for instance: `/path/to/yourproject/simplesamlphp/config` .
+
+2. add an alias on your virtual host so `/simplesaml` resolves to `/path/to/yourproject/simplesamlphp/www`.
+you are using Apache as your local server, the virtual host configuration will look as follow:
+
+ ```apacheconf
+ <VirtualHost *:80>
+  ServerName local.myproject.com
+  DocumentRoot "/var/www/project"
+  SetEnv SIMPLESAMLPHP_CONFIG_DIR /var/www/project/simplesamlphp/config
+  Alias /simplesaml /var/www/project/simplesamlphp/www
+  ErrorLog "/log/project_log"
+  ......
+ </VirtualHost>
+ ```
 
 5. Set up the SimpleSAMLphp config files making a copy of `config_templates` folder.
     
