@@ -153,11 +153,11 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
               else
             grep -- '\<'"${guide##*/}"'\>' comment.txt || echo -n "-\u0020[/docs/"$guide"]("$url"/docs/"$guide")\n" >> comment.txt
             fi
-          elif ls -R source/content/dns-providers | grep '^\<'"${doc:27: -3}"'\>.md$'
+          elif ls -R source/content/dns-providers | grep '^\<'"${doc:29: -3}"'\>.md$'
             then
               grep -- '\<'"${doc:29: -3}"'\>' comment.txt || echo -n "-\u0020[/docs/"${doc:29: -3}"]("$url"/docs/"${doc:29: -3}")\n" >> comment.txt
           else
-            grep -- '\<'"${doc:15: -3}"'\>' comment.txt || echo -n "-\u0020[/"${doc:15: -3}"]("$url"/"${doc:15: -3}")\n" >> comment.txt
+            grep -- '\<'"${doc:15: -3}"'\>' comment.txt || echo -n "-\u0020[/docs/"${doc:15: -3}"]("$url"/docs/"${doc:15: -3}")\n" >> comment.txt
         fi
     elif [[ $doc =~ $changelog_path ]]
     then
