@@ -6,6 +6,7 @@ categories: []
 contributors: [davidneedham]
 searchboost: 90
 ---
+CHANGE!
 We've compiled some great tips for agencies working on Pantheon. They are loosely ordered from basic to advanced and cover a variety of topics. If you would like to see something added to this doc, please use the **Contribute** link at the top of this article.
 
 ## Become a Partner Agency / Join the Partner Program
