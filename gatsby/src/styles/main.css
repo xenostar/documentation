@@ -452,9 +452,6 @@ span#changelog-rsaquo {
 
 	/*  */
 
-	.navbar-fixed-top .navbar-collapse {
-		max-height: 450px;
-	}
 	.jumbotron h1 {
 		font-size: 32px !important;
 	}
